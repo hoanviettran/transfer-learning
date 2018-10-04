@@ -199,13 +199,13 @@ def VGG16(include_top=True,
             weights_path = keras_utils.get_file(
                 'vgg16_weights_tf_dim_ordering_tf_kernels.h5',
                 WEIGHTS_PATH,
-                cache_subdir='models',
+                cache_subdir='/home/hoanviettran/deep-learning/transfer-learning/models',
                 file_hash='64373286793e3c8b2b4e3219cbf3544b')
         else:
             weights_path = keras_utils.get_file(
                 'vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5',
                 WEIGHTS_PATH_NO_TOP,
-                cache_subdir='models',
+                cache_subdir='/home/hoanviettran/deep-learning/transfer-learning/models',
                 file_hash='6d6bbae143d832006294945121d1f1fc')
         model.load_weights(weights_path)
         if backend.backend() == 'theano':
